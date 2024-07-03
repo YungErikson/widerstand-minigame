@@ -15,8 +15,14 @@ body {
 
 #image-container {
     position: relative;
+    width: 600px; /* Maximale Breite des Containers */
     display: flex;
     justify-content: center;
+}
+
+#widerstandskasten {
+    width: 100%;
+    height: auto;
 }
 
 #box-container {
