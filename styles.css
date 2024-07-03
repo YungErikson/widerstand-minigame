@@ -15,7 +15,6 @@ body {
 
 #image-container {
     position: relative;
-    max-width: 800px;
     display: flex;
     justify-content: center;
 }
