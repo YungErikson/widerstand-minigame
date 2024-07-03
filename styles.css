@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#resistor-container, #box-container {
+    display: flex;
+    margin: 20px;
+}
+
+.resistor, .box {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #000;
+    width: 100px;
+    text-align: center;
+}
+
+.resistor {
+    background-color: #f0f0f0;
+    cursor: grab;
+}
+
+.box {
+    background-color: #e0e0e0;
+}
