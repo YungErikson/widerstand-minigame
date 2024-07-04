@@ -8,6 +8,14 @@ body {
     margin: 0;
 }
 
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto; /* Enable scrolling within the container */
+    width: 100%;
+}
+
 #resistor-container {
     display: flex;
     margin: 20px;
@@ -56,12 +64,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: transparent; /* Make the boxes transparent */
-    border: none; /* Remove the border */
+    background-color: transparent;
+    border: none;
   }
-  
-/* Positioniere die Kästchen über dem Bild */
-/* Diese Positionen sind Beispiele und müssen an das verkleinerte Bild angepasst werden */
 
 #box-12 {
     top: 40px;
