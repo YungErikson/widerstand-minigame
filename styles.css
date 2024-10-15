@@ -495,3 +495,11 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+#score-display {
+    font-size: 1.5em;
+    color: #006400; /* Dunkles Grün für positive Verstärkung */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
