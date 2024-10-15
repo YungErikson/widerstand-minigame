@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const resistors = document.querySelectorAll('.resistor');
     const boxes = document.querySelectorAll('.box');
+    let score = 0; // Punktestand-Variable
+    const scoreDisplay = document.getElementById('score-display'); // Referenz zur Punkteanzeige
   
     resistors.forEach(resistor => {
         assignRandomValue(resistor);
@@ -41,8 +43,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const expectedValue = parseInt(boxId.split('-')[1]);
   
         if (resistorValue === expectedValue.toString()) {
-            // Correct placement logic (e.g., alert or visual feedback)
+            // Korrekte Zuordnung: Punktestand erhöhen
             alert('Richtig eingeordnet!');
+            updateScore(); // Funktion zum Erhöhen des Punktestands
             
             // Get the resistor element that was dropped
             const droppedResistor = document.querySelector('.random-resistor');
@@ -54,9 +57,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 droppedResistor.classList.remove('random-resistor');
             }
         } else {
-            // Incorrect placement logic (e.g., alert or visual feedback)
+            // Falsche Zuordnung: Keine Punkte
             alert('Falsch eingeordnet!');
         }
+    }
+
+    // Funktion zum Aktualisieren des Punktestands
+    function updateScore() {
+        score += 1; // Punktestand um 1 erhöhen
+        scoreDisplay.textContent = 'Punkte: ' + score; // Punkteanzeige aktualisieren
     }
 });
 
